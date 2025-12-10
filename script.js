@@ -141,7 +141,7 @@ function checkLock2() {
         document.body.addEventListener(
           "click",
           () => {
-            window.location.href = "https://lvhphv.csb.app/";
+            window.location.href = "https://cletoa.github.io/CletoAugustosEscapeRoomGithub/";
           },
           { once: true }
         );
@@ -385,3 +385,4 @@ window.addEventListener("pointermove", (e) => {
     uvReveal.style.display = "none";
   }
 });
+
