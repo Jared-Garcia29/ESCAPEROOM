@@ -1,0 +1,581 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: block;
+  background-image: url("/Images/background12\ \(1\)\ \(1\).png");
+  background-size: cover; /* Make the image cover the entire screen */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  cursor: default;
+  transition: background-image 0.5s ease;
+}
+
+:root {
+  --sizelight: 400px;
+  --inside: rgba(168, 85, 255, 0.95); /*-- is like css variable*/
+  --main: rgba(168, 85, 255, 0.2);
+}
+
+#lighting {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--sizelight);
+  height: var(--sizelight);
+  border-radius: 50%; /* makes it circular */
+  pointer-events: none; /* click goes through it */
+  mix-blend-mode: screen; /* brightens content below */
+  z-index: 9999;
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--inside) 0%,
+    var(--main) 25%,
+    rgba(168, 85, 255, 0.08) 40%
+  );
+  filter: blur(8px); /* soft edges */
+  transition: transform 120ms linear;
+  will-change: transform, left, top;
+  transform: translate(-50%, -50%);
+}
+
+.fade {
+  opacity: 0.2;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(3px 4px 4px rgb(255, 255, 255));
+}
+
+.center-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.left {
+  height: 100%;
+  width: 30%;
+}
+
+.right {
+  height: 100%;
+  width: 70%;
+}
+
+.row {
+  height: calc(100% / 3);
+  width: 100%;
+  display: flex;
+}
+
+.gif-images {
+  height: 100%;
+  width: 50%;
+}
+
+.transparent-images {
+  height: 50%;
+  width: 100%;
+}
+
+/* rules for controlling content */
+.center-content1 {
+  display: flex;
+  justify-content: flex-end; /* moves image to the right */
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.center-content-bottom {
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+}
+
+.botr {
+  justify-content: center;
+  align-items: right;
+}
+
+img {
+  max-height: 30%;
+  max-width: 30%;
+}
+
+.translucent {
+  opacity: 0.6;
+}
+.refer {
+  opacity: 1;
+}
+
+.click-me:hover {
+  cursor: pointer;
+}
+
+.grow {
+  transform: scale(1.02);
+  filter: drop-shadow(3px 4px 4px);
+}
+
+/* colors */
+
+.red {
+  background-color: #e53935;
+}
+.orange {
+  background-color: #fb8c00;
+}
+.yellow {
+  background-color: #fdd835;
+}
+.green {
+  background-color: #43a047;
+}
+.blue {
+  background-color: #1e88e5;
+}
+.purple {
+  background-color: #8e24aa;
+}
+.pink {
+  background-color: #f06292;
+}
+.cyan {
+  background-color: #00acc1;
+}
+.magenta {
+  background-color: #d81b60;
+}
+.lime {
+  background-color: #9ccc65;
+}
+.violet {
+  background-color: #7e57c2;
+}
+.teal {
+  background-color: #009688;
+}
+.brown {
+  background-color: #6d4c41;
+}
+.gold {
+  background-color: #ffd700;
+}
+.silver {
+  background-color: #c0c0c0;
+}
+.coral {
+  background-color: #ff7f50;
+}
+.navy {
+  background-color: #001f3f;
+}
+.lavender {
+  background-color: #b57edc;
+}
+.salmon {
+  background-color: #fa8072;
+}
+.dark-grey {
+  background-color: #707070;
+}
+.light-grey {
+  background-color: #a9a9a9;
+}
+
+.top {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+
+.low {
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+
+.tsb {
+  width: 100%;
+  height: 50%;
+  display: block;
+}
+
+.tsbi {
+  width: 100%;
+  height: 50%;
+}
+
+.ts {
+  width: 21%;
+  height: 100%;
+  display: block;
+}
+
+.ls {
+  height: 100%;
+  width: 20%;
+}
+.tmi {
+  height: 100%;
+  width: calc(100% / 3);
+  display: block;
+}
+
+.tm {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.lm {
+  height: 100%;
+  width: 60%;
+}
+
+.mmm {
+  height: 50%;
+  width: 100%;
+}
+
+.tmit {
+  height: 80%;
+  width: 100%;
+}
+.tmib {
+  height: 20%;
+  width: 100%;
+}
+
+.door {
+  content: url("Images/door.png");
+}
+
+/*lock modal (100% width,100% height %, display flex, broken into 5 pieces*/
+.full {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.pieces {
+  flex: 1; /* equal width for each column */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc; /* optional, helps visualize */
+}
+
+.insidepieces {
+  height: 20%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* prevent images from overflowing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middlerow {
+  background-color: rgb(11, 11, 11);
+}
+
+.insidepieces img {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: contain; /* keep aspect ratio */
+}
+
+/*lock modal (100% width,100% height %, display flex, broken into 5 pieces*/
+
+.flash {
+  animation: flashv 1s ease-in-out 3; /* 3 times */
+}
+
+@keyframes flashv {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+  }
+}
+
+.close {
+  color: #aaaaaa;
+  position: fixed;
+  top: 23%;
+  right: 38%;
+  font-size: 90px;
+  font-weight: bolder;
+}
+
+.closelock {
+  color: #aaaaaa;
+  position: fixed;
+  top: 8%;
+  right: 12%;
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*cipher*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+/* Don't cover the entire screen */
+.modal-body {
+  width: 40%;
+  height: 40%;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  margin: 0;
+  content: url("Images/ceaserCipher-photoaidcom-2x-ai-zoom.png");
+}
+
+/*cipher*/
+
+/*combination lock */
+.modall {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: #00000000;
+  opacity: 0.99;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Don't cover the entire screen */
+.modal-bodyl {
+  width: 70%;
+  height: 70%;
+  opacity: 1;
+  margin: 0;
+  display: flex; /* enable children to stretch */
+  justify-content: center;
+  align-items: center;
+}
+
+/*combination lock */
+
+.modaln1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+/* Don't cover the entire screen */
+.modal-bodyn1 {
+  width: 40%;
+  height: 40%;
+  opacity: 1;
+  margin: 0;
+  background-image: url("numbers/Notes\ 0\(modal\ version\).png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.modaln2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+.modal-bodyn2 {
+  width: 40%;
+  height: 40%;
+  opacity: 1;
+  margin: 0;
+  background-image: url("numbers/Notes1\(modal\ version\).png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.modal-middle {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+.modal-body-middle {
+  width: 40%;
+  height: 40%;
+  opacity: 1;
+  margin: 0;
+
+  background-image: url("numbers/Notes\ middle\(modal\ version\).png");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-second {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+.modal-body-second {
+  width: 40%;
+  height: 40%;
+  opacity: 1;
+  margin: 0;
+
+  background-image: url("numbers/Notes sec(modal version).png"); /* use background-image instead */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-third {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.99;
+}
+
+.modal-body-third {
+  width: 40%;
+  height: 40%;
+  opacity: 1;
+  margin: 0;
+
+  background-image: url("numbers/Notes\ 8\(modal\ version\).png"); /* new image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fadeable {
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.98); /* optional slight shrink for effect */
+}
+
+#fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0; /* initially invisible */
+  pointer-events: none; /* allow clicks through it */
+  transition: opacity 1s ease; /* smooth fade */
+  z-index: 1000; /* on top of everything */
+}
+
+#fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0; /* initially invisible */
+  pointer-events: none; /* allow clicks through it */
+  transition: opacity 1s ease; /* smooth fade */
+  z-index: 1000; /* on top of everything */
+}
+
+#darkness {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  pointer-events: none;
+  z-index: 20000;
+  mask: radial-gradient(
+    circle var(--size, 250px) at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    black 100%
+  );
+  -webkit-mask: radial-gradient(
+    circle var(--size, 250px) at var(--x, 50%) var(--y, 50%),
+    transparent 0%,
+    rgb(0, 0, 0) 100%
+  );
+  opacity: 0; /* initially hidden */
+  transition: opacity 0.1s linear;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+  }
+
+  .left {
+    height: 30%;
+    width: 100%;
+    display: flex;
+  }
+
+  .right {
+    height: 70%;
+    width: 100%;
+  }
+
+  .transparent-images {
+    height: 100%;
+    width: 50%;
+  }
+}

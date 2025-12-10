@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Totoro!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <div id="lighting"></div>
+  <div id="fadeOverlay"></div>
+  <div id="darkness"></div>
+
+  <body>
+    <div class="top">
+      <div class="ts">
+        <div class="tsb">
+          <div class="tsbi center-content">
+            <img src="Images/notes.png" onclick="showModalSecond()" />
+          </div>
+          <div class="tsbi"></div>
+        </div>
+        <div class="tsb"></div>
+      </div>
+
+      <div class="tm">
+        <div class="tmi center-content">
+          <div class="mmm center-content">
+            <img src="Images/safes.png" onclick="showLock()" id="uvlight" />
+          </div>
+          <div class="mmm"></div>
+        </div>
+
+        <div class="tmi">
+          <div class="tmit center-content1 fade">
+            <img src="Images/real.png" autofill="off" onclick="showLock2()" />
+          </div>
+          <div class="tmib center-content">
+            <img src="Images/notes.png" onclick="showModalMiddle()" />
+          </div>
+        </div>
+        <div class="tmi">
+          <div class="tmit center-content">
+            <img src="Images/Alphabet.jpg" onclick="showModal()" id="cipher" />
+          </div>
+          <div class="tmib"></div>
+        </div>
+      </div>
+
+      <div class="ts center-content">
+        <div class="tsb">
+          <img src="Images/notes.png" onclick="showModalnote1()" />
+        </div>
+        <div class="tsb"></div>
+      </div>
+    </div>
+
+    <div class="low">
+      <div class="ls center-content">
+        <img src="Images/notes.png" onclick="showModalnote0()" />
+      </div>
+      <div class="lm"></div>
+      <div class="ls">
+        <img src="Images/notes.png" onclick="showModalThird()" />
+      </div>
+    </div>
+
+    <div class="modall center-content" id="myLock">
+      <span class="closelock" onclick="hideLock()">&times;</span>
+
+      <div class="modal-bodyl">
+        <div class="full">
+          <div class="pieces">
+            <div class="insidepieces center-content red">
+              <img src="numbers/number0.png" />
+            </div>
+            <div class="insidepieces center-content red">
+              <img src="numbers/number1.png" />
+            </div>
+            <div class="insidepieces middlerow">
+              <img src="numbers/number2.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number3.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number4.png" />
+            </div>
+          </div>
+
+          <div class="pieces">
+            <div class="insidepieces red">
+              <img src="numbers/number5.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number6.png" />
+            </div>
+            <div class="insidepieces middlerow">
+              <img src="numbers/number7.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number8.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number9.png" />
+            </div>
+          </div>
+          <div class="pieces">
+            <div class="insidepieces red">
+              <img src="numbers/number0.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number1.png" />
+            </div>
+            <div class="insidepieces middlerow">
+              <img src="numbers/number2.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number3.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number4.png" />
+            </div>
+          </div>
+          <div class="pieces">
+            <div class="insidepieces red">
+              <img src="numbers/number5.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number6.png" />
+            </div>
+            <div class="insidepieces middlerow">
+              <img src="numbers/number7.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number8.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number9.png" />
+            </div>
+          </div>
+          <div class="pieces">
+            <div class="insidepieces red">
+              <img src="numbers/number0.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number3.png" />
+            </div>
+            <div class="insidepieces middlerow">
+              <img src="numbers/number5.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number7.png" />
+            </div>
+            <div class="insidepieces red">
+              <img src="numbers/number9.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal center-content" id="myModal">
+      <span class="close" onclick="hideModal()">&times;</span>
+      <div class="modal-body"></div>
+    </div>
+
+    <div id="modal-note-0" class="modaln1 center-content">
+      <span class="close" onclick="hideModalnote0()">&times;</span>
+
+      <div class="modal-bodyn1"></div>
+    </div>
+
+    <div id="modal-note-1" class="modaln2 center-content">
+      <span class="close" onclick="hideModalnote1()">&times;</span>
+
+      <div class="modal-bodyn2"></div>
+    </div>
+
+    <div class="modall center-content" id="myLock2">
+      <span class="close" onclick="hideLock2()">&times;</span>
+
+      <div class="modal-bodyl">
+        <div class="full center-content">
+          <p>Enter the passcode:</p>
+          <input
+            type="text"
+            id="lock2Input"
+            placeholder="Type here..."
+            autocomplete="off"
+          />
+          <button onclick="checkLock2()">Submit</button>
+          <p id="lock2Message" style="color: red; margin-top: 10px"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-middle-note" class="modal-middle center-content">
+      <span class="close" onclick="hideModalMiddle()">&times;</span>
+      <div class="modal-body-middle"></div>
+    </div>
+
+    <div id="modal-second-note" class="modal-second center-content">
+      <span class="close" onclick="hideModalSecond()">&times;</span>
+      <div class="modal-body-second"></div>
+    </div>
+
+    <div id="modal-third-note" class="modal-third center-content">
+      <span class="close" onclick="hideModalThird()">&times;</span>
+      <div class="modal-body-third"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="preload.js"></script>
+    <audio src="sounds/ambiancecreepy.mp3" autoplay loop></audio>
+  </body>
+</html>
