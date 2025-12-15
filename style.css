@@ -86,7 +86,6 @@ img:hover {
   display: flex;
   justify-content: flex-end; /* moves image to the right */
   align-items: center;
-  margin-top: 10vh;
 }
 
 .center-content-bottom {
@@ -579,4 +578,5 @@ img {
     width: 50%;
   }
 }
+
 
